@@ -2,7 +2,11 @@
  *         Responsive Layout
  * --------------------------------- */
 +widescreen()
-    .is-1-column .container, .is-2-column .container
+    .is-1-column .container
+        max-width: $widescreen - 2 * $gap // 將 $desktop 改成 $widescreen
+        width: $widescreen - 2 * $gap // 將 $desktop 改成 $widescreen
+
+    .is-2-column .container
         max-width: $widescreen - 2 * $gap // 將 $desktop 改成 $widescreen
         width: $widescreen - 2 * $gap // 將 $desktop 改成 $widescreen
 
@@ -12,8 +16,8 @@
         width: $fullhd - 2 * $gap // 將 $widescreen 改成 $fullhd
 
     .is-1-column .container
-        max-width: $desktop - 2 * $gap
-        width: $desktop - 2 * $gap
+        max-width: $fullhd - 2 * $gap // 將 $widescreen 改成 $fullhd
+        width: $fullhd - 2 * $gap // 將 $widescreen 改成 $fullhd
 
 +tablet()
     .is-sticky
